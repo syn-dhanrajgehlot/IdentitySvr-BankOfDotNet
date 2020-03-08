@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.1022
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankOfDotNet.API", "BankOfDotNet.API\BankOfDotNet.API.csproj", "{12D8E976-4AF9-4CCB-92B6-C3C48191F2B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankOfDotNet.IdentitySvr", "BankOfDotNet.IdentitySvr\BankOfDotNet.IdentitySvr.csproj", "{020CB288-F206-4E56-B37E-43A62F9B7A73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankOfDotNet.MyClient", "BankOfDotNet.MyClient\BankOfDotNet.MyClient.csproj", "{EC4E2FFE-3659-4BDC-A8FB-5F14ACA159C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{12D8E976-4AF9-4CCB-92B6-C3C48191F2B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12D8E976-4AF9-4CCB-92B6-C3C48191F2B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12D8E976-4AF9-4CCB-92B6-C3C48191F2B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{020CB288-F206-4E56-B37E-43A62F9B7A73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{020CB288-F206-4E56-B37E-43A62F9B7A73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{020CB288-F206-4E56-B37E-43A62F9B7A73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{020CB288-F206-4E56-B37E-43A62F9B7A73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC4E2FFE-3659-4BDC-A8FB-5F14ACA159C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC4E2FFE-3659-4BDC-A8FB-5F14ACA159C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC4E2FFE-3659-4BDC-A8FB-5F14ACA159C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC4E2FFE-3659-4BDC-A8FB-5F14ACA159C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
