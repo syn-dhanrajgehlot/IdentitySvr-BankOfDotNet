@@ -14,6 +14,28 @@ namespace BankOfDotNet.MyClient
 
         private static async Task MainAsync()
         {
+            var discoRo = await HttpClientDiscoveryExtensions.GetDiscoveryDocumentAsync(new HttpClient(), "http://localhost:5000");
+            if (discoRo.IsError)
+            {
+                Console.WriteLine(discoRo.Error);
+                return;
+            }
+
+            // get token
+            var tokenClientRo = new TokenClient(discoRo.TokenEndpoint, "ro.client", "secret");
+            var tokenRespRo = await tokenClientRo.RequestResourceOwnerPasswordAsync("Dhanraj", "gehlot", "bankOfDotNetApi");
+            if (tokenRespRo.IsError)
+            {
+                Console.WriteLine(tokenRespRo.Error);
+                return;
+            }
+
+            Console.WriteLine(tokenRespRo.Json);
+            Console.WriteLine("\n\n\n");
+
+
+
+
             var disco = await HttpClientDiscoveryExtensions.GetDiscoveryDocumentAsync(new HttpClient(), "http://localhost:5000");
             if (disco.IsError)
             {
