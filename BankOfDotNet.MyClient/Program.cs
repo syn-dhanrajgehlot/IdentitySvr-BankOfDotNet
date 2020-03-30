@@ -14,24 +14,24 @@ namespace BankOfDotNet.MyClient
 
         private static async Task MainAsync()
         {
-            var discoRo = await HttpClientDiscoveryExtensions.GetDiscoveryDocumentAsync(new HttpClient(), "http://localhost:5000");
-            if (discoRo.IsError)
-            {
-                Console.WriteLine(discoRo.Error);
-                return;
-            }
+            //var discoRo = await HttpClientDiscoveryExtensions.GetDiscoveryDocumentAsync(new HttpClient(), "http://localhost:5000");
+            //if (discoRo.IsError)
+            //{
+            //    Console.WriteLine(discoRo.Error);
+            //    return;
+            //}
 
-            // get token
-            var tokenClientRo = new TokenClient(discoRo.TokenEndpoint, "ro.client", "secret");
-            var tokenRespRo = await tokenClientRo.RequestResourceOwnerPasswordAsync("Dhanraj", "gehlot", "bankOfDotNetApi");
-            if (tokenRespRo.IsError)
-            {
-                Console.WriteLine(tokenRespRo.Error);
-                return;
-            }
+            //// get token
+            //var tokenClientRo = new TokenClient(discoRo.TokenEndpoint, "ro.client", "secret");
+            //var tokenRespRo = await tokenClientRo.RequestResourceOwnerPasswordAsync("Dhanraj", "gehlot", "bankOfDotNetApi");
+            //if (tokenRespRo.IsError)
+            //{
+            //    Console.WriteLine(tokenRespRo.Error);
+            //    return;
+            //}
 
-            Console.WriteLine(tokenRespRo.Json);
-            Console.WriteLine("\n\n\n");
+            //Console.WriteLine(tokenRespRo.Json);
+            //Console.WriteLine("\n\n\n");
 
 
 
@@ -69,7 +69,6 @@ namespace BankOfDotNet.MyClient
                     }), Encoding.UTF8, "application/json");
 
             var responce = await client.PostAsync("http://localhost:52117/api/customers", custInfo);
-
             if (!responce.IsSuccessStatusCode)
             {
                 Console.WriteLine(responce.StatusCode);
